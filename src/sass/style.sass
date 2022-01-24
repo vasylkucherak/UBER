@@ -1,6 +1,11 @@
 $blue_color: #1EACC7
 $pink_color: #FF5656
     
+=btn_hover
+    &:hover
+        background-image: none
+        background-color: $blue_color
+
 *
     font-family: 'Roboto', sans-serif
 
@@ -21,17 +26,14 @@ nav
     padding: 13px 70px
     margin: 0
     list-style-type: none
-
-    .menu_link
+    &_link
         font-size: 15px
         font-weight: 300
         text-decoration: none
         color: #FFFFFF
-
-    .menu_item
+    &_item
         border-right: 2px dotted black
         padding-right: 29px
-
         &:nth-of-type(6)
             border-right: 0
             padding-right: 0
@@ -41,35 +43,30 @@ nav
     width: 100%
     height: 87px
     background: rgba(0, 0, 0, 0.6)
-
-    .subheader_logo
+    &_logo
         display: block
         margin-top: 16px
         max-width: 100%
-
-    .subheader_official
+    &_official
         margin-top: 6px
         font-size: 13px
         font-weight: 400
         color: #ffffff
         opacity: .5
-
-    .subheader_call
+    &_call
         margin-top: 20px
         text-align: right
         font-size: 12px
         font-weight: 300
         color: #ffffff
-
-    .subheader_phone
+    &_phone
         display: block
         text-align: right
         font-size: 22px
         font-weight: 400
         text-decoration: none
         color: #ffffff
-
-    .subheader_btn
+    &_btn
         display: flex
         align-items: center
         justify-content: center
@@ -85,35 +82,33 @@ nav
         text-transform: uppercase
         color: #FFFFFF
         text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+        +btn_hover
+
 
 .promo
     margin-top: 50px
     min-height: 800px
     background: url('../img/bg/uber_bg.jpg') center (center / cover) no-repeat
     padding: 150px 0 135px 0
-
-    .promo_header
+    &_header
         font-size: 60px
         font-weight: 700
         text-align: center
         color: #ffffff
-
-    .promo_subheader
+    &_subheader
         margin-top: 2px
         font-size: 36px
         font-weight: 700
         text-align: center
         color: #ffffff
-
-    .promo_descr
+    &_descr
         margin-top: 23px
         font-size: 18px
         font-weight: 400
         line-height: 24px
         text-align: center
         color: #ffffff
-
-    .promo_btn
+    &_btn
         display: block
         margin: 118px auto 0 auto
         width: 259px
@@ -127,6 +122,7 @@ nav
         text-transform: uppercase
         color: #ffffff
         text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+        +btn_hover
 
 
 .label
@@ -168,13 +164,11 @@ nav
 .resons
     min-height: 850px
     padding: 18px 0 64px 0
-
     .wrapper
         display: flex
         align-items: center
         flex-wrap: wrap
         width: 1140px
-
     .round
         display: flex
         margin-left: 19px
@@ -184,10 +178,8 @@ nav
         background-color: $blue_color
         justify-content: center
         align-items: center
-
     .icon
         display: block
-
     .descr
         margin: 20px 19px 20px 25px
         width: 390px
@@ -195,7 +187,6 @@ nav
         font-weight: 300
         line-height: 21px
         color: #000000
-
         span
             font-weight: 400
             color: $blue_color
@@ -204,10 +195,8 @@ nav
     min-height: 864px
     padding: 48px 0 79px 0
     background: url('../img/bg/mobile_bg.jpg') center center / cover no-repeat
-
     .row
         margin-top: 32px
-
     &_item
         position: relative
         width: 320px
@@ -215,33 +204,25 @@ nav
         margin: 0 auto
         margin-bottom: 19px
         padding-top: 92px
-
         &_1
             background: url('../img/cards/card_1.jpg') center center / cover no-repeat
-
         &_2
             background: url('../img/cards/card_2.jpg') center center / cover no-repeat
-
         &_3
             background: url('../img/cards/card_3.jpg') center center / cover no-repeat
-
         &_4
             background: url('../img/cards/card_4.jpg') center center / cover no-repeat
-
         &_5
             background: url('../img/cards/card_5.jpg') center center / cover no-repeat
-
         &_6
             background: url('../img/cards/card_6.jpg') center center / cover no-repeat
-
         &_subtitle
             text-align: center
             font-size: 24px
             font-weight: 400
             line-height: 32px
             text-transform: uppercase
-            color: #ffffff
-        
+            color: #ffffff      
         &_plus
             display: flex
             justify-content: center
@@ -257,6 +238,27 @@ nav
             padding: 6px
             background-color: #000000
             cursor: pointer
+            &:before
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background-color: $blue_color
+                transition: .5s all
+            &:after
+                content: ''
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                width: 2px
+                height: 14px
+                background-color: $blue_color
+                transition: .5s all
+            &:hover
+                &:before, &:after
+                    background-color: $pink_color
+                
 
 .choice 
     position: relative
@@ -284,6 +286,46 @@ nav
         background-color: #070716
         z-index: -1
 
-
-
+.require
+    padding: 68px 0 84px 0
+    &_block
+        margin: 33px 0
+        &_nmb
+            margin-bottom: 0px
+    &_title
+        font-size: 22px
+        font-weight: 400
+        color: #1ca8c3
+    &_list
+        list-style-type: none
+        padding-left: 50px
+        margin-top: 22px
+        li
+            position: relative
+            font-size: 17px
+            font-weight: 300
+            line-height: 24px
+            margin-bottom: 10px
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                left: -32px
+                top: 3px
+                width: 22px
+                height: 21px
+                background: url('../icons/check/check_blue.png') center center / cover no-repeat
+    &_descr
+        margin-top: 25px
+        font-size: 17px
+        font-weight: 300
+        line-height: 24px
+        color: #1ca8c3
+    .warning
+        .require_title
+            color: $pink_color
+        .require_list
+            li
+                &:before
+                    background: url('../icons/check/check_red.png') center center / cover no-repeat
 
