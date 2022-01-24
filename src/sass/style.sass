@@ -329,3 +329,36 @@ nav
                 &:before
                     background: url('../icons/check/check_red.png') center center / cover no-repeat
 
+.world
+    position: relative
+    min-height: 720px
+    padding: 50px 0
+    background-color: #080816
+    z-index: -1
+    &_bg
+        display: block
+        position: absolute
+        top: 0px
+        left: 50%
+        transform: translateX(-50%)
+        width: 1345px
+        height: 720px
+        background: url('../img/bg/world_bg.jpg') center center / cover no-repeat
+        z-index: -1
+    &_link 
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 49px
+        text-align: center
+        font-size: 15px
+        font-weight: 400
+        line-height: 68px
+        text-transform: uppercase
+        color: #1fbad6
+        text-decoration: none
+        z-index: 3
+        &:hover 
+            text-decoration: none
+            color: #fff
+            z-index: 3
