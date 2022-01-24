@@ -143,12 +143,12 @@ nav {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, .21);
 }
 
-.mobile-app {
+.resons {
     min-height: 850px;
     padding: 18px 0 64px 0;
 }
 
-.mobile-app .advantages {
+.resons .advantages {
     margin: 0 auto;
     width: 115px;
     height: 27px;
@@ -160,7 +160,7 @@ nav {
     text-transform: uppercase;
 }
 
-.mobile-app .reasons {
+.resons .reasons_header {
     margin-top: 38px;
     font-size: 38px;
     font-weight: 700;
@@ -169,14 +169,14 @@ nav {
     color: #222222;
 }
 
-.mobile-app .wrapper {
+.resons .wrapper {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     width: 1140px;
 }
 
-.mobile-app .round {
+.resons .round {
     display: flex;
     margin-left: 19px;
     width: 116px;
@@ -187,11 +187,11 @@ nav {
     align-items: center;
 }
 
-.mobile-app .icon {
+.resons .icon {
     display: block;
 }
 
-.mobile-app .descr {
+.resons .descr {
     margin: 20px 19px 20px 25px;
     width: 390px;
     font-size: 17px;
@@ -200,7 +200,7 @@ nav {
     color: #000000;
 }
 
-.mobile-app .descr span {
+.resons .descr span {
     font-weight: 400;
     color: #1EACC7;
 }
