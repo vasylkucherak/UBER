@@ -1,3 +1,6 @@
+$blue_color: #1EACC7
+$pink_color: #FF5656
+    
 *
     font-family: 'Roboto', sans-serif
 
@@ -73,7 +76,7 @@ nav
         margin-top: 19px
         width: 172px
         height: 46px
-        background-image: linear-gradient(to top, #1EACC7 0%, #4CE2FF 100%)
+        background-image: linear-gradient(to top, $blue_color 0%, #4CE2FF 100%)
         box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
         border: none
         border-radius: 4px
@@ -115,7 +118,7 @@ nav
         margin: 118px auto 0 auto
         width: 259px
         height: 63px
-        background-image: linear-gradient(to top, #1EACC7 0%, #4CE2FF 100%)
+        background-image: linear-gradient(to top, $blue_color 0%, #4CE2FF 100%)
         box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
         border: none
         border-radius: 4px
@@ -136,6 +139,10 @@ nav
     color: #ffffff
     text-align: center
     text-transform: uppercase
+    &_white 
+        background-color: #fff
+        color: #000
+        z-index: 2
 
 .title
     margin-top: 38px
@@ -144,6 +151,9 @@ nav
     text-align: center
     text-transform: uppercase
     color: #222222
+    &_white 
+        color: #fff
+        z-index: 2
 
 .subtitle
     margin-top: 19px
@@ -151,6 +161,9 @@ nav
     font-weight: 400
     text-align: center
     color: #222222
+    &_white 
+        color: #fff
+        z-index: 2
 
 .resons
     min-height: 850px
@@ -168,7 +181,7 @@ nav
         width: 116px
         height: 116px
         border-radius: 100%
-        background-color: #1EACC7
+        background-color: $blue_color
         justify-content: center
         align-items: center
 
@@ -185,7 +198,7 @@ nav
 
         span
             font-weight: 400
-            color: #1EACC7
+            color: $blue_color
 
 .mobile
     min-height: 864px
@@ -244,3 +257,33 @@ nav
             padding: 6px
             background-color: #000000
             cursor: pointer
+
+.choice 
+    position: relative
+    min-height: 895px
+    padding: 57px 0 138px 0
+    background: url('../img/bg/mobile_bg.jpg') center (center / cover) no-repeat
+    z-index: -1
+    &_img 
+        position: relative
+        display: block
+        margin: 56px auto 0 auto
+        z-index: 2
+    &_descr 
+        text-align: center
+        color: #222222
+        font-size: 17px
+        font-weight: 300
+        line-height: 24px
+    .black 
+        position: absolute 
+        top: 0
+        left: 0
+        height: 499px
+        width: 100%
+        background-color: #070716
+        z-index: -1
+
+
+
+
