@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Uber</title>
-    <link rel="shortcut icon" href="icons/favicon_uber.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
             <div class="container">
                 <ul class="menu">
-                    <li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
+                    <li class="menu_item"><a href="#header" class="menu_link">Главная</a></li>
                     <li class="menu_item"><a href="#require" class="menu_link">Со своим автомобилем</a></li>
                     <li class="menu_item"><a href="#require" class="menu_link">На автомобиле компании</a></li>
                     <li class="menu_item"><a href="#warning" class="menu_link">Требования</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Оставить заявку</a></li>
+                    <li class="menu_item"><a href="#header" class="menu_link">Контакты</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link" data-popup>Заказать звонок</a></li>
                 </ul>
             </div>
             <div class="hamburger">
@@ -46,7 +46,7 @@
     
                     <div class="col-6 col-md-3">
                         <a href="tel:84957970988" class="xs-visible subheader_phone">8 495 797 09 88</a>
-                        <button class="subheader_btn">заказать звонок</button>
+                        <button class="subheader_btn" data-popup>заказать звонок</button>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве.  Водители у нас
                         зарабатывают от 80000- 120000 в месяц.
                     </div>
-                    <button class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+                    <button class="promo_btn" data-popup>заказать звонок</button>
                 </div>
             </div>
         </div>
@@ -376,6 +376,20 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup">
+        <div class="popup__dialog">
+            <form action="#">
+                <div class="popup__close" data-close>&times;</div>
+                <div class="popup__title">Введите свои данные, и мы перезвоним вам</div>
+                <input required placeholder="Имя" name="name" type="text" class="popup__input" autocomplete="off">
+                <input required placeholder="Телефон" name="phone" type="phone" class="popup__input" autocomplete="off">
+                <button class="submit__btn btn">Позвоните мне!</button>
+            </form>
+        </div>
+    </div>
+    <button data-popup class="btn">Click me</button>
+
     <script src="js/script.js"></script>
 </body>
 </html>
